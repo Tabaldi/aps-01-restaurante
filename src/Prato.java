@@ -7,6 +7,8 @@ public class Prato {
 	private Double preco;
 	private String descricao;
 	
+	private Ingrediente[] ingredientes = new Ingrediente[3];
+		
 	public Prato(String name, Double preco){
 		super(); 
 		this.name = name;
@@ -39,6 +41,14 @@ public class Prato {
 	@Override
 	public String toString() {
 		return "Prato [name=" + name + ", preco=" + preco + ", descricao=" + descricao + "]";
+	}
+
+	public Ingrediente[] getIngredientes() {
+		return ingredientes;
+	}
+
+	public void setIngredientes(Ingrediente[] ingredientes) {
+		this.ingredientes = ingredientes;
 	}
 	
 	
