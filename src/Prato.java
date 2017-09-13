@@ -20,11 +20,6 @@ public class Prato {
 		this.descricao = descricao;
 	}
 	
-	public Prato(String name){
-		super(); 
-		this.name = name;
-	}
-	
 	public String getName() {
 		return name;
 	}
