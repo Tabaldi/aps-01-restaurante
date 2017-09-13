@@ -4,13 +4,14 @@ public class Pedido {
 	private Double precoTotal;
 	
 	public Pedido(Prato[] pratos){
+		this.pratos = pratos;
 		this.precoTotal = somaTotal(pratos);
 	}
 
 	private Double somaTotal(Prato[] pratos) {
 		double total = 0;
 		for(int i=0; i < pratos.length; i++){
-			total =+ pratos[i].getPreco();
+			total += pratos[i].getPreco();
 		}
 		return total;
 	}

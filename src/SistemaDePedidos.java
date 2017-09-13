@@ -6,10 +6,15 @@ public class SistemaDePedidos {
 		Prato p2 = new Prato("Xis SS", 1.5D, "Xis Super Salada");
 		Prato p3 = new Prato("Xis V", 1.5D, "Xis Vento");
 		Prato[] pratos = {p1,p2,p3};
-		Pedido pedido = new Pedido(pratos);
+		Prato[] pratosPedidos = {p1,p2};
+		
+		Pedido pedido = new Pedido(pratosPedidos);
 
-		Restaurante equilibrium = new Restaurante(pedido);
+		Restaurante equilibrium = new Restaurante(pratos);
 		equilibrium.mostrarCardapio();
+		equilibrium.fazerPedido(pedido);
+		equilibrium.finalizarPedido(5D);
+		equilibrium.mostrarCaixa();
 	}
 
 }
